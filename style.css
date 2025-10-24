@@ -1,0 +1,181 @@
+/* =========================
+   CalmSpace | Styles
+   ========================= */
+
+/* Global */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #4f60a7, #f1f8e9);
+  color: #004d40;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: #ffffffb3;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 15px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+nav a:hover { text-decoration: underline; }
+
+form label { display: block; margin: 10px 0 5px; font-weight: 500; }
+form select, form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #009688;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover { background-color: #00796b; }
+
+/* Breathing Circle */
+#circle {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  background-color: #02cab6;
+  border-radius: 50%;
+  transition: transform 4s ease-in-out;
+}
+
+/* Hidden congrats message */
+.hidden { display: none; }
+#sessionComplete {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Mood / Journal Entries */
+.mood-item, .journal-item {
+  background: #c1ff7b;
+  margin: 8px 0;
+  padding: 8px;
+  border-left: 4px solid #b49900;
+  border-radius: 4px;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Charts */
+canvas { margin: 20px 0; }
+
+/* Music Player */
+.music-player {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 500px){
+  #circle { width: 100px; height: 100px; }
+  form button { width: 100%; }
+}
+
+/* Confetti pieces */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 9999;
+  pointer-events: none;
+  animation: fall 3s linear forwards;
+}
+
+/* Confetti fall animation */
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity:1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity:0; }
+}
+
+/* Celebration page floating emojis */
+.emoji {
+  position: absolute;
+  font-size: 30px;
+  animation: floatEmoji linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes floatEmoji {
+  0% { transform: translateY(100vh) rotate(0deg); }
+  100% { transform: translateY(-10vh) rotate(360deg); }
+}
+
+/* Celebration page body override */
+body.celebration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(135deg, #01aaff, #fce4ec);
+}
+
+/* Headings on celebration page */
+body.celebration h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Navigation Menu */
+nav.menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+nav.menu a {
+  text-decoration: none;
+  color: #7b019a;
+  font-weight: bold;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav.menu a:hover {
+  background-color: #0056b8;
+  color: #fff;
+}

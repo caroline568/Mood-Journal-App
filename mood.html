@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalmSpace | Mood Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Navigation Menu -->
+    <nav class="menu">
+      <a href="index.html">Home 🏠</a>
+      <a href="mood.html">Mood Tracker 🌈</a>
+      <a href="journal.html">Journal ✍️</a>
+      <a href="history.html">History 📊</a>
+    </nav>
+
+    <h1>Mood Tracker 🌸</h1>
+
+    <form id="moodForm">
+      <label for="mood">How are you feeling today?</label>
+      <select id="mood">
+        <option>😄 Happy</option>
+        <option>😊 Content</option>
+        <option>😐 Neutral</option>
+        <option>😔 Sad</option>
+        <option>😤 Stressed</option>
+        <option>😡 Angry</option>
+        <option>😴 Tired</option>
+        <option>🤗 Grateful</option>
+        <option>😢 Overwhelmed</option>
+      </select>
+
+      <label for="notes">Notes:</label>
+      <textarea id="notes" placeholder="Add your notes..."></textarea>
+
+      <button type="submit">Save Mood 💚</button>
+    </form>
+
+    <h2>Breathing Exercise 🌿</h2>
+    <div id="circle"></div>
+    <p id="instruction">Click start to begin</p>
+    <button id="startBreathing">Start Breathing</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

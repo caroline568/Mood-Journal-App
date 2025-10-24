@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 Celebration! 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="celebration">
+
+  <div class="container">
+
+    <!-- Navigation Menu -->
+    <nav class="menu">
+      <a href="index.html">Home 🏠</a>
+      <a href="mood.html">Mood Tracker 🌈</a>
+      <a href="journal.html">Journal ✍️</a>
+      <a href="history.html">History 📊</a>
+    </nav>
+
+    <h1>🎉✨ YOU DID IT! ✨🎉</h1>
+    <div id="emojiContainer"></div>
+
+  </div>
+
+  <script>
+    const emojiContainer = document.getElementById('emojiContainer');
+    const emojis = ["🌸","🌿","✨","💚","🎵","🤗","😄","🍃","🎉"];
+    for(let i=0; i<30; i++){
+      const span = document.createElement('span');
+      span.classList.add('emoji');
+      span.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      span.style.left = Math.random()*100 + "vw";
+      span.style.animationDuration = (5 + Math.random()*5) + "s";
+      span.style.fontSize = (20 + Math.random()*30) + "px";
+      emojiContainer.appendChild(span);
+    }
+
+    function launchConfetti(count=50){
+      for(let i=0;i<count;i++){
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random()*window.innerWidth + 'px';
+        confetti.style.backgroundColor = `hsl(${Math.random()*360},70%,60%)`;
+        confetti.style.width = confetti.style.height = (5 + Math.random()*8) + 'px';
+        document.body.appendChild(confetti);
+        setTimeout(()=> confetti.remove(), 3000 + Math.random()*2000);
+      }
+    }
+    launchConfetti(50);
+  </script>
+
+</body>
+</html>
